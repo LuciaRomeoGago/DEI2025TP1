@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* hero= es la seccion principal de la pagina (parte superior)*/
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px 20px;
+    position: relative;
+}
+
+/*contenedor para centrar y limitar ancho*/
+.hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*encapsulo el contenido para ser flexible, alineo texto e imagen*/
+.hero-content {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 20px; 
+    max-width: 100%;
+}
+
+/*agrupo titulo, texto y boton*/
+.hero .hero-text {
+    text-align: left; /* Alinea texto a la izquierda */
+    max-width: 70%; /* Ocupa mitad del contenedor */
+}
+
+/*titulo principal*/
+.hero .headline {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/*subtitulo*/
+.hero .supporting-headline {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+/*la imagen destacada*/
+.hero .featured-image {
+    max-width: 20%;
+    height: auto;
+    margin: 10px 0;
+
+}
+
+/*boton y cuando paso el cursor cambia. cta=call to action*/
+.hero .cta-button {
+    background-color: #b8c5d2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*cuando pasa el cursor cambia de color*/
+.hero .cta-button:hover {
+    background-color: #26030b;
+}
+
+/*seccionde las imagenes, el relleno*/
+.imagenes {
+    padding: 50px 20px;
+}
+
+/*estilo del titulo de la seccion*/
+.imagenes h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*creo cuadricula, centro elementos horizontal, justifico al centro, elementos se pegan*/
+.imagenes-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+/*estilo de cada elemento, fondo, borde, sombra y relleno,
+Flexbox c/elemento ocupa tercio de espacio*/
+.imagenes-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 300px; 
+}
+
+/*estilo para imagen, titulo y descripcion de c/elemento*/
+.imagenes-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imagenes-item h3 {
+    margin-top: 10px;
+}
+
+.imagenes-item p {
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/*alineo elementos=texto y enlaces, los separo y centro verticalmente*/
+.footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*muestro horizontalmente los links y espacio entre ellos*/
+.footer .footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+/*enlaces del pie de pagina*/
+.footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* estilo para celulares */
+@media (max-width: 768px) {
+
+    /*elementos verticalmente y texto centrado*/
+    .hero .hero-content {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    /*texto ocupa el ancho y centra el texto*/
+    .hero .hero-text {
+        max-width: 100%; 
+        text-align: center; 
+    }
+
+    /*reduce imagen destaca para celu*/
+    .hero .featured-image {
+        max-width: 80%; 
+    }
+
+    /*se apilan los elementos verticalmente*/
+    .imagenes-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*c/elemento ocupa 80% de ancho pantalla*/
+    .imagenes-item {
+        width: 80%;
+    }
+
+    /*apila verticalmente los elementos del footer*/
+    .footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /*da margen superior a enlaces para separarlos del texto*/
+    .footer .footer-links {
+        margin-top: 10px;
+    }
+}
